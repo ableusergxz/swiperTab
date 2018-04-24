@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.wrap{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    .header{
+        width:100%;
+        height: 500px;
+        background: red;
+        .img{
+            width:100%;
+            height: 200px;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+        .swiper-container{
+            width:100%;
+            height: 300px;
+            background:#825132;
+            .swiper-wrapper{
+                width:100%;
+                height: 100%;
+                .swiper-slide{
+                    width:100%;
+                    height: 100%;
+                    display:flex;
+                    flex-wrap:wrap;
+                    dl{
+                        width:20%;
+                        height: 120px;
+                        dt{
+                            width:100%;
+                            height: 60px;
+                            line-height: 60px;
+                            text-align: center;
+                            font-size: 50px;
+                        }
+                        dd{
+                            width:100%;
+                            height: 60px;
+                            line-height: 60px;
+                            text-align:center;
+                            font-size:50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section{
+        flex:1;
+        overflow-x: hidden;
+        .bannerTab{
+            width:100%;
+            height: 100%;
+            .banner1{
+                width:100%;
+                height: 100%;
+                .banner2{
+                    font-size:50px;
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        width:100%;
+        height: 200px;
+        display:flex;
+        border-top: 1px solid #333;
+        dl{
+            width:25%;
+            height: 200px;
+            dt{
+                width:100%;
+                height: 100px;
+                line-height:100px;
+                text-align:center;
+                font-size:150px;
+            }
+            dd{
+                width:100%;
+                height: 100px;
+                line-height:100px;
+                text-align:center;
+                font-size:50px;
+            }
+        }
+    }
+}

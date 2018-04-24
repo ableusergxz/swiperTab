@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>美团App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+        <div class="wrap">
+           <header class="header">
+                <div class="img">
+                     <img src="images/first.png" alt="">
+                </div>
+                <!-- swiper轮播 -->
+                <div class="banner swiper-container">
+                      <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>美食</dd>
+                                </dl>
+                            </div>
+                            <div class="swiper-slide">
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>电影</dd>
+                                </dl>
+                            </div>
+                            <div class="swiper-slide">
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                                <dl>
+                                    <dt>む</dt>
+                                    <dd>外卖</dd>
+                                </dl>
+                            </div>
+                      </div>
+                </div>
+           </header>
+           <section class="section">
+                <div class="swiper-container bannerTab">
+                    <div class="banner1 swiper-wrapper">
+                            <div class="banner2 swiper-slide">首页</div>
+                            <div class="banner2 swiper-slide"><img src="images/fj.PNG" alt=""></div>
+                            <div class="banner2 swiper-slide"><img src="images/tt.PNG" alt=""></div>
+                            <div class="banner2 swiper-slide"><img src="images/wd.PNG" alt=""></div>
+                    </div>
+            </div>
+           </section>
+           <footer class="footer">
+                <dl>
+                    <dt>◎</dt>
+                    <dd>首页</dd>
+                </dl>
+                <dl>
+                    <dt>◎</dt>
+                    <dd>附近</dd>
+                </dl>
+                <dl>
+                    <dt>◎</dt>
+                    <dd>头条</dd>
+                </dl>
+                <dl>
+                    <dt>◎</dt>
+                    <dd>我的</dd>
+                </dl>
+
+           </footer>
+        </div>
+</body>
+<script src="js/swiper.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+//swiper
+    var mySwiper = new Swiper('.banner', {
+       autoplay: 2000,//可选选项，自动滑动
+       loop:true
+    })
+//tab
+    var list=$(".footer dl");
+    var myswiper = new Swiper(".bannerTab",{
+        onSlideChangeStart:function(e){
+            change(e.activeIndex);
+        }
+    })
+    $(".footer dl").on("click",function(){
+        var ind = $(this).index();
+        change(ind);
+        myswiper.slideTo(ind);
+        //$(this).addClass('active').siblings().removeClass('active');
+    })
+    function change(ind){
+        list.eq(ind).addClass('active').siblings().removeClass('active');
+    }
+</script>
+</html>
